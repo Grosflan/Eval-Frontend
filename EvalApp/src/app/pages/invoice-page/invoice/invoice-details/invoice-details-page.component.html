@@ -1,0 +1,24 @@
+<h3> Ajout d'une nouvelle Facture</h3>
+
+<form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Montant de la facture: </label>
+    </div>
+    <div>
+        <input id="amount" name="amount" type="text" required formControlName="amount">
+    </div>
+    <div>  
+        <label>Statut de la facture: </label>
+    </div>
+    <select name="status" formControlName="state" class="form-select">
+        <option value="SENT">SENT</option>
+        <option value="PAID">PAID</option>
+
+      </select>
+    <br>
+    <div>
+        <button type="submit" class="btn btn-secondary" [disabled]="!invoiceForm.valid"> Enregistrer la facture </button>
+        <button type="button" class="btn btn-secondary" (click)="navigateToUrl('/' + this.id)"> Profil client </button>
+    </div>
+</form>
+

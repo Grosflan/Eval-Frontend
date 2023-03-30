@@ -1,0 +1,27 @@
+<ng-container *ngIf="customer">
+    <h2> Fiche de {{customer.fullName}} </h2>
+    <h3> {{ customer.email }}</h3>
+    <br />
+    <button type="button" class="btn btn-secondary" (click)="navigateToUrl('/')"> Retour aux clients </button>
+</ng-container>
+
+<table class="table" *ngIf="invoices">
+    <thead>
+      <tr>
+        <th scope="col">Prix</th>
+        <th scope="col">Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of invoices">
+        <td>{{ item.amount }}</td>
+        <td>{{ item.state }}</td>
+      </tr>
+  </table>
+
+  <ng-container *ngIf="customer">
+    <br />
+    <button type="button" class="btn btn-secondary" (click)="navigateToUrl(customer.id + '/invoices/add')"> Créer une facture </button>
+</ng-container>
+
+<p *ngIf="!customer">En cours de chargement</p>

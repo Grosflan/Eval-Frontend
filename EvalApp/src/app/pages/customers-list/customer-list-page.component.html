@@ -1,0 +1,14 @@
+
+<h2>Liste des clients</h2>
+<button type="button" class="btn btn-secondary mb-4" (click)="navigateToUrl('create');">Créer un client</button>
+<table>
+    <tr *ngFor="let item of customers">
+            <td >
+                <label (click)="navigateToUrl(item.id)"> 
+                
+                    {{ item.fullName }}     {{ item.email }}
+            
+                </label>
+            </td>
+    </tr>
+</table>

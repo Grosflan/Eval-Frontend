@@ -1,0 +1,22 @@
+<h3> Ajout d'un nouveau client</h3>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Full name: </label>
+    </div>
+    <div>
+        <input id="fullName" name="fullName" type="text" required formControlName="fullName">
+    </div>
+    <div>  
+        <label>email: </label>
+    </div>
+    <div>
+        <input id="email" name="email" type="text" formControlName="email" required>
+    </div>
+    <br>
+    <div>
+        <button type="submit" class="btn btn-secondary" [disabled]="!profileForm.valid"> Enregistrer </button>
+        <button type="button" class="btn btn-secondary" (click)="navigateToUrl('/')"> Retour aux clients </button>
+    </div>
+</form>
+
