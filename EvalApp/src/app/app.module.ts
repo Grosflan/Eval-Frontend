@@ -9,7 +9,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CustomerFormPageComponent } from './pages/customer-form/customer-form-page.component';
 import { CustomerDetailsPageComponent } from './pages/customers-details/customer-details-page.component';
-import { InvoiceListComponent } from './pages/invoice-page/invoice/invoice-list/invoice-list.component'
 import { CustomerListPageComponent } from './pages/customers-list/customer-list-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { InvoiceDetailsPageComponent} from './pages/invoice-page/invoice/invoice-details/invoice-details-page.component'
@@ -25,7 +24,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
     InvoiceDetailsPageComponent,
     CustomerFormPageComponent,
     CustomerDetailsPageComponent,
